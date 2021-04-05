@@ -1,0 +1,17 @@
+<wj-flex-grid #flex
+        [(itemsSource)]="data">
+    </wj-flex-grid>
+    <div style="display:none" class="column-picker-container">
+        <wj-list-box #columnPicker class="column-picker">
+        </wj-list-box>
+        <br>
+        <div class="column-picker-data">
+          {{columnPicker.checkedItems.length}}/{{flex.columns.length}}
+          <br><br>
+          <button [disabled]="columnPicker.checkedItems.length === flex.columns.length" (click)="selectAll()">Select</button>
+          <br><br>
+          <button [disabled]="columnPicker.checkedItems.length === 0" (click)="selectAll(false)">Clear</button>
+          <br><br>
+          <button (click)="hide()">Close</button>
+        </div>
+    </div>

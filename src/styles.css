@@ -1,0 +1,51 @@
+/* Add application styles & imports to this file! */
+
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+
+body {
+  margin: 40px;
+}
+
+.wj-flexgrid {
+    max-height: 300px;
+    margin: 10px 0;
+}
+.column-picker-icon {
+    cursor: pointer;
+    color: #FF8754;
+    margin: 3px;
+}
+
+.column-picker-container {
+    background: inherit;
+    padding: 12px;
+    margin-left: 12px;
+    margin-top: 26px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.wj-listbox.column-picker {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0 10px;    
+    columns: 4; /* IE fallback */
+}
+.wj-listbox .wj-listbox-item > label {
+    display: block;
+    margin: 0 0 3px 0;
+}
+.wj-listbox .wj-listbox-item.wj-state-selected
+{
+    background: transparent;
+    color: inherit;
+}
+.wj-listbox .wj-listbox-item:hover {
+    background: rgba(0,0,0,.05);
+}
+.wj-listbox .drop-marker {
+    position: absolute;
+    background: #0085c7;
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 1000;
+}
